@@ -1,4 +1,7 @@
 FROM amazoncorretto:25
-COPY ./target/classes/com /tmp/com
+
+COPY ./target/lab1-1.0-SNAPSHOT-jar-with-dependencies.jar /tmp/app.jar
+
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.test.App"]
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
